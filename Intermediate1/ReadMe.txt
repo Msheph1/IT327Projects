@@ -1,1 +1,0 @@
-Intermediate project 1
