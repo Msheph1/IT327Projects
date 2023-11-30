@@ -1,0 +1,14 @@
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/bin/Debug/net7.0/Intermediate3
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/bin/Debug/net7.0/Intermediate3.deps.json
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/bin/Debug/net7.0/Intermediate3.runtimeconfig.json
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/bin/Debug/net7.0/Intermediate3.dll
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/bin/Debug/net7.0/Intermediate3.pdb
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.AssemblyInfoInputs.cache
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.AssemblyInfo.cs
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.csproj.CoreCompileInputs.cache
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.dll
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/refint/Intermediate3.dll
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.pdb
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/Intermediate3.genruntimeconfig.cache
+/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/Intermediate3/obj/Debug/net7.0/ref/Intermediate3.dll
