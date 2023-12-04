@@ -1,0 +1,14 @@
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.AssemblyInfoInputs.cache
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.AssemblyInfo.cs
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.csproj.CoreCompileInputs.cache
+C:\Users\suade\repos\IT327Projects\Advanced\bin\Debug\net7.0\Advanced.exe
+C:\Users\suade\repos\IT327Projects\Advanced\bin\Debug\net7.0\Advanced.deps.json
+C:\Users\suade\repos\IT327Projects\Advanced\bin\Debug\net7.0\Advanced.runtimeconfig.json
+C:\Users\suade\repos\IT327Projects\Advanced\bin\Debug\net7.0\Advanced.dll
+C:\Users\suade\repos\IT327Projects\Advanced\bin\Debug\net7.0\Advanced.pdb
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.dll
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\refint\Advanced.dll
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.pdb
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\Advanced.genruntimeconfig.cache
+C:\Users\suade\repos\IT327Projects\Advanced\obj\Debug\net7.0\ref\Advanced.dll
