@@ -1,0 +1,15 @@
+/Users/Maximum/IT327 Project/IT327Projects/bin/Debug/net8.0/IT327Projects
+/Users/Maximum/IT327 Project/IT327Projects/bin/Debug/net8.0/IT327Projects.deps.json
+/Users/Maximum/IT327 Project/IT327Projects/bin/Debug/net8.0/IT327Projects.runtimeconfig.json
+/Users/Maximum/IT327 Project/IT327Projects/bin/Debug/net8.0/IT327Projects.dll
+/Users/Maximum/IT327 Project/IT327Projects/bin/Debug/net8.0/IT327Projects.pdb
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.AssemblyInfoInputs.cache
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.AssemblyInfo.cs
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.csproj.CoreCompileInputs.cache
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.sourcelink.json
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.dll
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/refint/IT327Projects.dll
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.pdb
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/IT327Projects.genruntimeconfig.cache
+/Users/Maximum/IT327 Project/IT327Projects/obj/Debug/net8.0/ref/IT327Projects.dll
