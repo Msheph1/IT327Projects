@@ -21,6 +21,7 @@ public class Song{
 public class SongNode{
     public Song SongData;
     public SongNode Next;
+    public SongNode Prev;
     public SongNode(Song song)
     {
         SongData = song;
@@ -32,14 +33,15 @@ public class SongNode{
 public class Playlist{
     public List<Song> Songs {get; set;}
     private SongNode DummyHead;
-    private SongNode Tail;
+    private SongNode DummyTail;
     public Playlist()
     {
         Songs = new List<Song>();
         Song NullSong = new Song("","");
         DummyHead = new SongNode(NullSong);
-        Tail = new SongNode(NullSong);
-        DummyHead.Next = Tail;
+        DummyTail = new SongNode(NullSong);
+        DummyHead.Next = DummyTail;
+        DummyTail.Prev = DummyHead;
     }
 
     public void AddSong(Song song){
