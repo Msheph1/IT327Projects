@@ -20,11 +20,12 @@ public class Song{
 
 public class SongNode{
     public Song SongData;
-    public SongNode Next;
-    public SongNode Prev;
+    public SongNode? Next;
+    public SongNode? Prev;
     public SongNode(Song song)
     {
         SongData = song;
+        Prev = null;
         Next = null;
     }
 
@@ -37,7 +38,7 @@ public class Playlist{
     public Playlist()
     {
         Songs = new List<Song>();
-        Song NullSong = new Song("","");
+        Song NullSong = new Song("dum","");
         DummyHead = new SongNode(NullSong);
         DummyTail = new SongNode(NullSong);
         DummyHead.Next = DummyTail;
@@ -46,14 +47,18 @@ public class Playlist{
 
     public void AddSong(Song song){
         SongNode Temp = new SongNode(song);
-        if(Tail.SongData.SongName == null)
+        if(DummyHead.Next == DummyTail)
         {
-            Tail = Temp;
-            Console.WriteLine("done");
+            DummyHead.Next = Temp;
+            Temp.Prev = DummyHead;
+            Temp.Next = DummyTail;
+            DummyTail.Prev = Temp;
         }
         else{
-            Tail.Next = Temp;
-            Tail = Temp;
+            DummyTail.Prev.Next = Temp;
+            Temp.Prev = DummyTail.Prev;
+            Temp.Next = DummyTail;
+            DummyTail.Prev = Temp;
         }
 
         
@@ -61,58 +66,54 @@ public class Playlist{
 
     public void PlayNext()
     {
-        
-        if(DummyHead.Next.Next != null)
+        if(DummyHead.Next != DummyTail)
         {
-        DummyHead.Next = DummyHead.Next.Next;
-        DummyHead = DummyHead.Next;
+            DummyHead.Next = DummyHead.Next.Next;
+            DummyHead.Next.Prev = DummyHead;
         }
-        else{
-            Tail = new SongNode(new Song("",""));
-            DummyHead.Next = Tail;
-        }
+        
     }
 
-    public void RemoveSong(string name, string author)
+    public bool RemoveSong(string name, string author)
     {
-        SongNode? Iter = DummyHead;
-        SongNode? LastIter = null;
-        while(Iter?.Next != null)
+        SongNode Iter = DummyHead;
+        while(Iter != DummyTail)
         {
              
             if(Iter.Next.SongData.SongName.Equals(name) && Iter.Next.SongData.SongAuthor.Equals(author))
             {
                 Iter.Next = Iter.Next.Next;
-            }
-            if(Iter.Next == null)
-            {
-                LastIter = Iter;
+                Iter.Next.Prev = Iter;
+                return true;
             }
             Iter = Iter.Next;
         }
-        if(LastIter != null)
-        {
-            LastIter.Next = null;
-        }
+        return false;
+        
     }
 
+    public bool IsEmpty()
+    {
+        return DummyHead.Next == DummyTail;  
+    }
 
     public override string ToString()
     {
-        string Ret = "\n";
-        if(DummyHead.Next == Tail)
+        string? Ret = "";
+        if(DummyHead.Next == DummyTail)
         {
             return "Empty!\n";
         }
         SongNode? Iter = DummyHead.Next;
-        Ret += "Playing Now - ";
-        while(Iter != null)
+        Ret += "\nPlaying Now - ";
+        while(Iter != DummyTail)
         {
-            Ret += Iter.SongData.SongName + "By " + Iter.SongData.SongAuthor + "\n";
+            Ret += Iter.SongData.SongName + " By " + Iter.SongData.SongAuthor + "\n";
             Iter = Iter.Next;
         }
         return Ret + "\n\n";
     }
+
 
 }
 
@@ -139,12 +140,11 @@ class Program
         pl.AddSong(new Song("Cruel Summer","Taylor Swift"));
 
         string? input = "-1";
+        Console.WriteLine("Welcome to your music playlist!");
         while(!input.Equals("4"))
         {
-            Console.WriteLine("Welcome to your music playlist!\nThe current playlist is: " + pl.ToString() +"What do you want to do\n1 - Add a song\n2 - Play next\n3 - Remove a song\n4 - Exit");
+            Console.WriteLine("\nThe current playlist is: " + pl.ToString() +"What do you want to do\n1 - Add a song\n2 - Play next\n3 - Remove a song\n4 - Exit");
             input = Console.ReadLine();
-            if(input != null){
-                
             //Add song
             if(input.Equals("1"))
             {   
@@ -164,7 +164,7 @@ class Program
                     if(int.TryParse(UserIn, out SongInput))
                     {
                     
-                    if(SongInput < 0 || SongInput > SongList.Count())
+                    if(SongInput > 0  && SongInput <= SongList.Count())
                         {
                             Song temp = SongList[SongInput -1];
                             Console.WriteLine(temp);
@@ -193,8 +193,43 @@ class Program
             //Remove Song
             else if(input.Equals("3"))
             {
-            
+                if(!pl.IsEmpty())
+                {
+                string? SongName = "";
+                string? SongAuthor = "";
+                bool result;
+                while(!SongName.Equals("CANCEL") && !SongAuthor.Equals("CANCEL"))
+                {
+                Console.WriteLine("What is the name of the song you want to remove or \"CANCEL\"?");
+                SongName = Console.ReadLine();
+                if(!SongName.Equals("CANCEL"))
+                {
+                    Console.WriteLine("What is the Author of the song you want to remove or \"CANCEL\"?");
+                    SongAuthor = Console.ReadLine();
+                    if(!SongAuthor.Equals("CANCEL"))
+                    {
+                        
+                        result = pl.RemoveSong(SongName,SongAuthor);
+                        if(result)
+                        {
+                            Console.WriteLine("Successfully Removed The Song.");
+                            SongName = "CANCEL";
+                        }
+                        else{
+                            Console.WriteLine("That Song does not exist, Please Try Again");
+                        }
+                    }
+                }
+
+
+                }
+                }
+                else{
+                    Console.WriteLine("The playlist has nothing to remove!");
+                }
+                
             }
+            //Exit
             else if(input.Equals("4"))
             {
                 ;
@@ -202,10 +237,7 @@ class Program
             else{
                 Console.WriteLine("Invalid Input Please Try Again");
             }
-            }
-            else{
-                input = "-1";
-            }
+            
         }
     }
 }
