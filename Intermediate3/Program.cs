@@ -29,14 +29,13 @@ class Program
     {
         for (int i = 0; i < 10; i++)
         {
-            Thread.Sleep(20);
             Console.WriteLine("waahhhhhhhhhh");
         }
     }
 
     static void RealTornado()
     {
-        while (true)
+        for (int i = 0; i < 20000; i++)
         {
             Console.WriteLine("waahhhhhhhhhh");
         }
