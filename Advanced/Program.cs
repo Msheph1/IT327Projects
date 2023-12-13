@@ -2,9 +2,15 @@
 //By Max Shepherd
 
 using System;
+
+//Song class for holding the song name and author
 public class Song{
     public string SongName {get; set;}
     public string SongAuthor {get; set;}
+    /*constructor for creating a song
+    
+    */
+    
     public Song(string songName, string songAuthor)
     {
         SongName = songName;
@@ -122,7 +128,7 @@ class Program
     static void Main(string[] args)
     {
 
-        Playlist pl = new Playlist();
+        Playlist Pl = new Playlist();
         List<Song> StartingSongs = new List<Song>();
 
         StartingSongs.Add(new Song("Cruel Summer","Taylor Swift"));
@@ -134,21 +140,21 @@ class Program
         StartingSongs.Add(new Song("Rockin' Around The Christmas Tree","Brenda Lee"));
         StartingSongs.Add(new Song("Is It Over Now?","Taylor Swift"));
         StartingSongs.Add(new Song("Water","Tyla"));
-        pl.Songs = StartingSongs;
-        pl.AddSong(new Song("You Broke My Heart", "Drake"));
-        pl.AddSong(new Song("Jingle Bell Rock", "Bobby Helms"));
-        pl.AddSong(new Song("Cruel Summer","Taylor Swift"));
+        Pl.Songs = StartingSongs;
+        Pl.AddSong(new Song("You Broke My Heart", "Drake"));
+        Pl.AddSong(new Song("Jingle Bell Rock", "Bobby Helms"));
+        Pl.AddSong(new Song("Cruel Summer","Taylor Swift"));
 
         string? input = "-1";
         Console.WriteLine("Welcome to your music playlist!");
         while(!input.Equals("4"))
         {
-            Console.WriteLine("\nThe current playlist is: " + pl.ToString() +"What do you want to do\n1 - Add a song\n2 - Play next\n3 - Remove a song\n4 - Exit");
+            Console.WriteLine("\nThe current playlist is: " + Pl.ToString() +"What do you want to do\n1 - Add a song\n2 - Play next\n3 - Remove a song\n4 - Exit");
             input = Console.ReadLine();
             //Add song
             if(input.Equals("1"))
             {   
-                List<Song> SongList = pl.Songs;
+                List<Song> SongList = Pl.Songs;
                 Console.WriteLine("The Song List contains: ");
                 int Count = 1;
                 foreach(Song Song in SongList)
@@ -158,7 +164,7 @@ class Program
                     }
                 Console.WriteLine(Count + "- Add none of these");
                 int SongInput = -1;
-                while(SongInput < 0 || SongInput > SongList.Count())
+                while(SongInput < 1 || SongInput > SongList.Count())
                 {
                     string? UserIn = Console.ReadLine();
                     if(int.TryParse(UserIn, out SongInput))
@@ -168,7 +174,7 @@ class Program
                         {
                             Song temp = SongList[SongInput -1];
                             Console.WriteLine(temp);
-                            pl.AddSong(temp);
+                            Pl.AddSong(temp);
                         }
                         else if(SongInput == SongList.Count + 1)
                         {
@@ -188,12 +194,12 @@ class Program
             //Play Next
             else if(input.Equals("2"))
             {
-                pl.PlayNext();
+                Pl.PlayNext();
             }
             //Remove Song
             else if(input.Equals("3"))
             {
-                if(!pl.IsEmpty())
+                if(!Pl.IsEmpty())
                 {
                 string? SongName = "";
                 string? SongAuthor = "";
@@ -209,7 +215,7 @@ class Program
                     if(!SongAuthor.Equals("CANCEL"))
                     {
                         
-                        result = pl.RemoveSong(SongName,SongAuthor);
+                        result = Pl.RemoveSong(SongName,SongAuthor);
                         if(result)
                         {
                             Console.WriteLine("Successfully Removed The Song.");

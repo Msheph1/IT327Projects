@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/Users/jakenothvogel/.nuget/packages/": {}
+    "C:\\Users\\suade\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/HelloWorld/HelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\suade\\repos\\IT327Projects\\HelloWorld\\HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/HelloWorld/HelloWorld.csproj",
-      "packagesPath": "/Users/jakenothvogel/.nuget/packages/",
-      "outputPath": "/Users/jakenothvogel/Desktop/jakesFolder/it327/GroupProject/IT327Projects/HelloWorld/obj/",
+      "projectPath": "C:\\Users\\suade\\repos\\IT327Projects\\HelloWorld\\HelloWorld.csproj",
+      "packagesPath": "C:\\Users\\suade\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\suade\\repos\\IT327Projects\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jakenothvogel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\suade\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
