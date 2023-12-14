@@ -1,30 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-
+//Max Wilson
 class Program
 {
     static void Main()
     {
-        int n = 10; // Change this value to generate more Fibonacci numbers
+        //Prompt user for an N value to calculate to
+        //Using double to allow for larger fibonacci values
+        Console.WriteLine("Enter a value for N: ");
+        double n = double.Parse(Console.ReadLine());
         Console.WriteLine($"First {n} Fibonacci numbers:");
 
-        foreach (int fibNumber in GenerateFibonacci(n))
+        //Iterates through the function using yield statements
+        foreach (double fibNumber in GenerateFibonacci(n))
         {
+            //Print number
             Console.Write($"{fibNumber} ");
         }
 
         Console.ReadLine();
     }
 
-    static IEnumerable<int> GenerateFibonacci(int n)
+    static IEnumerable<double> GenerateFibonacci(double n)
     {
-        int a = 0, b = 1;
+        double a = 0, b = 1;
 
-        for (int i = 0; i < n; i++)
-        {
+        for (double i = 0; i < n; i++)
+        {   //Use Yield Return generator to return fibonacci values from function
             yield return a;
 
-            int temp = a;
+            double temp = a;
             a = b;
             b = temp + b;
         }

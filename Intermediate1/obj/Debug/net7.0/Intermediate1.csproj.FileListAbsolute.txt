@@ -1,0 +1,14 @@
+C:\Users\suade\repos\IT327Projects\Intermediate1\bin\Debug\net7.0\Intermediate1.exe
+C:\Users\suade\repos\IT327Projects\Intermediate1\bin\Debug\net7.0\Intermediate1.deps.json
+C:\Users\suade\repos\IT327Projects\Intermediate1\bin\Debug\net7.0\Intermediate1.runtimeconfig.json
+C:\Users\suade\repos\IT327Projects\Intermediate1\bin\Debug\net7.0\Intermediate1.dll
+C:\Users\suade\repos\IT327Projects\Intermediate1\bin\Debug\net7.0\Intermediate1.pdb
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.AssemblyInfoInputs.cache
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.AssemblyInfo.cs
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.csproj.CoreCompileInputs.cache
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.dll
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\refint\Intermediate1.dll
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.pdb
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\Intermediate1.genruntimeconfig.cache
+C:\Users\suade\repos\IT327Projects\Intermediate1\obj\Debug\net7.0\ref\Intermediate1.dll
