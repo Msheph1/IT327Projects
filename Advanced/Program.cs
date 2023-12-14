@@ -7,16 +7,14 @@ using System;
 public class Song{
     public string SongName {get; set;}
     public string SongAuthor {get; set;}
-    /*constructor for creating a song
-    
-    */
-    
+    //constructor for creating a song
     public Song(string songName, string songAuthor)
     {
         SongName = songName;
         SongAuthor = songAuthor;
     }
 
+    //overriding the to string method to print properly
     public override string ToString()
     {
         return SongName + " By " + SongAuthor;
@@ -24,10 +22,13 @@ public class Song{
 
 }
 
+//song node class for creating a doubly linked list of songs
 public class SongNode{
     public Song SongData;
     public SongNode? Next;
     public SongNode? Prev;
+    
+    //constructor for creating songnode and assigns the next and prev ptr to null
     public SongNode(Song song)
     {
         SongData = song;
@@ -37,10 +38,12 @@ public class SongNode{
 
 }
 
+//playlist object that holds a list of songs and sets up a playlist
 public class Playlist{
     public List<Song> Songs {get; set;}
     private SongNode DummyHead;
     private SongNode DummyTail;
+    //constructor for the playlist creates and empty linkedlist
     public Playlist()
     {
         Songs = new List<Song>();
@@ -51,6 +54,7 @@ public class Playlist{
         DummyTail.Prev = DummyHead;
     }
 
+    //adds a song to the playlist
     public void AddSong(Song song){
         SongNode Temp = new SongNode(song);
         if(DummyHead.Next == DummyTail)
@@ -69,7 +73,7 @@ public class Playlist{
 
         
     }
-
+    //goes to the next song by skipping over the head in the linked list
     public void PlayNext()
     {
         if(DummyHead.Next != DummyTail)
@@ -79,7 +83,7 @@ public class Playlist{
         }
         
     }
-
+    //removes a specific song specified for name and author
     public bool RemoveSong(string name, string author)
     {
         SongNode Iter = DummyHead;
@@ -98,11 +102,13 @@ public class Playlist{
         
     }
 
+    //checks if the playlist is empty
     public bool IsEmpty()
     {
         return DummyHead.Next == DummyTail;  
     }
 
+    //overrides tostring method to print properly
     public override string ToString()
     {
         string? Ret = "";
@@ -130,7 +136,7 @@ class Program
 
         Playlist Pl = new Playlist();
         List<Song> StartingSongs = new List<Song>();
-
+        //adds starting songs to the song pool
         StartingSongs.Add(new Song("Cruel Summer","Taylor Swift"));
         StartingSongs.Add(new Song("Paint the Town Red", "Doja Cat"));
         StartingSongs.Add(new Song("All I Want For Christmas Is You","Mariah Carey"));
@@ -141,10 +147,12 @@ class Program
         StartingSongs.Add(new Song("Is It Over Now?","Taylor Swift"));
         StartingSongs.Add(new Song("Water","Tyla"));
         Pl.Songs = StartingSongs;
+        //sets up starting playlist
         Pl.AddSong(new Song("You Broke My Heart", "Drake"));
         Pl.AddSong(new Song("Jingle Bell Rock", "Bobby Helms"));
         Pl.AddSong(new Song("Cruel Summer","Taylor Swift"));
 
+        //loop until exit
         string? input = "-1";
         Console.WriteLine("Welcome to your music playlist!");
         while(!input.Equals("4"))
